@@ -56,42 +56,12 @@ The project uses advanced natural language processing (NLP) techniques including
 - Python 3.8 or higher
 - pip package manager
 
-### Setup
-
-1. Clone the repository:
-```bash
-git clone <repository-url>
-cd hadith-semantic-search
-```
-
-2. Install required packages:
-```bash
-pip install -r requirements.txt
-```
-
-### Required Libraries
-
-```
-sentence-transformers==2.2.2
-transformers>=4.36.0
-torch>=2.0.0
-faiss-cpu
-rank-bm25
-numpy
-pandas
-gradio
-scikit-learn
-matplotlib
-seaborn
-```
-
 ## Dataset
 
 The project uses the `hadith_by_book.csv` dataset containing:
 - **Hadith text** (matn_text)
 - **Subject classifications** (main_subj)
 - **Reference URLs** (xref_url)
-- **Ayat IDs** (ayat_ids)
 - **Book metadata**
 
 ### Data Processing Steps
@@ -165,32 +135,6 @@ Test queries cover various topics:
 - Seeking knowledge
 - Charity and giving
 
-## Usage
-
-### Running the Notebook
-
-1. Open the Jupyter notebook:
-```bash
-jupyter notebook hadith.ipynb
-```
-
-2. Execute cells sequentially to:
-   - Load and preprocess data
-   - Generate embeddings
-   - Build search indices
-   - Test queries
-   - Evaluate performance
-
-### Using the Web Interface
-
-1. Generate required data files by running the notebook
-2. Launch the Gradio app:
-```bash
-python app.py
-```
-
-3. Open the provided URL in your browser
-4. Enter Arabic queries to search Hadiths
 
 ### Example Queries
 
@@ -228,9 +172,9 @@ The project includes a comprehensive evaluation framework:
 
 | Method | Precision@5 | Recall@5 |
 |--------|-------------|----------|
-| Pure Semantic (FAISS) | ~0.XX | ~0.XX |
-| Hybrid (BM25 + Semantic) | ~0.XX | ~0.XX |
-| Enhanced (with Anchors) | ~0.XX | ~0.XX |
+| Pure Semantic (FAISS) | ~0.03| ~0.03 |
+| Hybrid (BM25 + Semantic) | ~0.17 | ~0.17 |
+| Enhanced (with Anchors) | ~0.79 | ~0.80 |
 
 ## Deployment
 
@@ -301,15 +245,6 @@ The project includes deployment-ready files:
 7. **Context Window**: Show surrounding Hadiths for better understanding
 8. **Citation Network**: Leverage hadith-to-hadith references
 
-## Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 ### Areas for Contribution
 

@@ -10,7 +10,7 @@ app_file: app.py
 pinned: false
 ---
 
-# Hadith Semantic Search Project
+# Hadith Semantic Search Project to try it out visit https://huggingface.co/spaces/kdallash/Hadith_Semantic_Search
 
 ## Overview
 
